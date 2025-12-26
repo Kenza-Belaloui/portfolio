@@ -342,7 +342,6 @@ body {
 .tItem.left .tCard{ grid-column: 1; justify-self: end; }
 .tItem.right .tCard{ grid-column: 3; justify-self: start; }
 
-/* ✅ correction dot: align-self center + translateY(0) */
 .tItem .dot{
   grid-column: 2;
   width: 14px; height: 14px;
@@ -351,8 +350,13 @@ body {
   box-shadow: 0 0 0 6px rgba(255,79,216,0.16);
   justify-self: center;
   align-self: center;
-  transform: translateY(0);
+  position: absolute;
+  left: 2%;                 /* sur la ligne centrale */
+  top: 50%;                  /* centre vertical de l’item */
+  transform: translate(-50%, -50%);
 }
+
+
 
 .tCard{
   width: min(480px, 92%);
@@ -458,7 +462,7 @@ body {
   margin: 22px auto 0;
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 24px;
 }
 @media (max-width: 860px){ .projectsGrid{ grid-template-columns: 1fr; } }
 
@@ -496,7 +500,7 @@ body {
 .projMedia{
   position: relative;
   width: 100%;
-  height: 110px;
+  height: 250px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -506,7 +510,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.02);
+  transform: scale(1.0);
   transition: transform .25s ease;
   display: block;
   opacity: 0.95;

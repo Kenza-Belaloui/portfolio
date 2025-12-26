@@ -1,5 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
+import immoImg from "./assets/agence_immobiliere.png";
+import quickImg from "./assets/quick-liv.png";
+import portfolioImg from "./assets/portfolio.png";
+import geographieImg from "./assets/geographie.png";
+import imageImg from "./assets/image.png";
 import {
   Home,
   GraduationCap,
@@ -22,16 +27,16 @@ const LINKS = {
 };
 
 // ✅ Mets ta photo: src/assets/kenza.jpg (ou png) puis remplace l’URL par ton import si tu veux.
-const kenzaPhoto = "https://via.placeholder.com/500";
+const kenzaPhoto = imageImg;
 
 // ✅ Images projets (remplace par tes images)
 // Option A: mets des liens
 // Option B: mets des images dans /src/assets et importe-les (ex: import quicklivImg from "./assets/quickliv.jpg")
 const PROJECT_IMAGES = {
-  quickliv: "https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=1200&q=60",
-  immo: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=60",
-  portfolio: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=60",
-  viewmusic: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=60",
+  quickliv: quickImg,
+  immo: immoImg,
+  portfolio: portfolioImg,
+  viewmusic: geographieImg,
 };
 
 const TEXT = {
@@ -80,7 +85,6 @@ const TEXT = {
     },
     skills: {
       title: "Compétences",
-      subtitle: "Stack & outils (uniquement ce que tu as donné)",
       groups: [
         { title: "Frontend", items: ["HTML", "CSS", "React"] },
         { title: "Backend", items: ["Express.js"] },
@@ -96,7 +100,6 @@ const TEXT = {
     },
     projects: {
       title: "Projets",
-      subtitle: "2 cartes par ligne, mêmes dimensions, avec actions & hover.",
       btnCode: "Code",
       btnDemo: "Détails",
       list: [
@@ -107,7 +110,6 @@ const TEXT = {
             "App mobile d’achat & livraison (L3) — Flutter + Node/Express + temps réel.",
           tech: ["Flutter", "Dart", "Node", "Express", "Socket.io", "JWT", "Maps API"],
           link: "https://github.com/Kenza-Belaloui/Quick-Liv",
-          badge: "Featured",
           image: PROJECT_IMAGES.quickliv,
         },
         {
@@ -117,7 +119,6 @@ const TEXT = {
             "Gestion complète d’une agence : biens, clients, employés, contrats, RDV.",
           tech: ["Java Swing", "MySQL", "MVC"],
           link: "https://github.com/Kenza-Belaloui/Agence-immobiliere",
-          badge: "In progress",
           image: PROJECT_IMAGES.immo,
         },
         {
@@ -126,7 +127,7 @@ const TEXT = {
           desc:
             "Version pro : thème clair/sombre, FR/EN, animations, UI moderne.",
           tech: ["React", "CSS", "Framer Motion"],
-          link: "https://github.com/TON_GITHUB/portfolio",
+          link: "https://github.com/Kenza-Belaloui/portfolio",
           image: PROJECT_IMAGES.portfolio,
         },
         {
@@ -222,7 +223,7 @@ const TEXT = {
           title: "Interactive Portfolio",
           desc: "Pro version: light/dark, FR/EN, animations, modern UI.",
           tech: ["React","CSS","Framer Motion"],
-          link: "https://github.com/TON_GITHUB/portfolio",
+          link: "https://github.com/Kenza-Belaloui/portfolio",
           image: PROJECT_IMAGES.portfolio,
         },
         {
