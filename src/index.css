@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* laisse vide ou minimal, tout est dans app.css */
+html, body { margin: 0; padding: 0; }
+
