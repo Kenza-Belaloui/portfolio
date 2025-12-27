@@ -17,7 +17,7 @@ import {
   Github,
   Linkedin,
 } from "lucide-react";
-import "./app.css";
+import "./App.css";
 
 // ✅ Mets tes liens ici
 const LINKS = {
